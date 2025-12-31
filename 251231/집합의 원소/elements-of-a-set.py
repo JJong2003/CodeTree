@@ -8,7 +8,7 @@ array = [i for i in range(n + 1)]
 def _find(a):
     if array[a] != a:
         array[a] = _find(array[a])
-    return array[a]
+    return a
 
 
 def _union(a, b):
@@ -19,9 +19,9 @@ def _union(a, b):
         return
 
     if pa < pb:
-        array[b] = array[a]
+        array[b] = pa
     else:
-        array[a] = array[b]
+        array[a] = pb
 
 
 for i in range(m):
