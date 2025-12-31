@@ -15,13 +15,7 @@ def _union(a, b):
     pa = _find(a)
     pb = _find(b)
 
-    if pa == pb:
-        return
-
-    if pa < pb:
-        array[pb] = pa
-    else:
-        array[pa] = pb
+    array[pa] = pb
 
 
 for i in range(m):
