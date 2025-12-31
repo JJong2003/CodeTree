@@ -6,16 +6,23 @@ array = [i for i in range(n + 1)]
 
 
 def _find(a):
-    if array[a] != a:
-        array[a] = _find(array[a])
-    return a
+    if array[a] == a:
+        return a
+    array[a] = _find(array[a])
+    return array[a]
 
 
 def _union(a, b):
     pa = _find(a)
     pb = _find(b)
 
-    array[pa] = pb
+    if pa == pb:
+        return
+
+    if pa < pb:
+        array[pb] = pa
+    else:
+        array[pa] = pb
 
 
 for i in range(m):
