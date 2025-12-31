@@ -19,9 +19,9 @@ def _union(a, b):
         return
 
     if pa < pb:
-        array[b] = pa
+        array[pb] = pa
     else:
-        array[a] = pb
+        array[pa] = pb
 
 
 for i in range(m):
