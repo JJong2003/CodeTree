@@ -16,6 +16,8 @@ def _union(a, b):
     pa = _find(a)
     pb = _find(b)
 
+    if pa == pb: return
+    
     if size[pa] < size[pb]:
         uf[pa] = pb
         size[pb] += size[pa]
