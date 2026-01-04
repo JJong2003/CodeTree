@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n, m = map(int, input().split())
 
 uf = [i for i in range(n+1)]
@@ -28,6 +31,5 @@ for _ in range(m):
         _union(a, b)
     else:
         a = int(nums[0])
-        print(size[_find(a)])
-
-
+        sys.stdout.write(str(size[_find(a)]) + "\n")
+sys.stdout.flush()
